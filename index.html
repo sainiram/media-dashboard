@@ -1196,15 +1196,80 @@
             </div>
 
             <!-- New Post start >> -->
-            <div class="row" id="post">
-              <div class="col-6">
+            <div class="row" id="posts"></div>
+            <!-- New Post end << -->
+          </div>
+        </div>
+        <!-- Main_Content end >> -->
+      </main>
+    </div>
+    <!-- Main body end >> -->
+
+    <!-- Script area -->
+
+    <!-- Swiper Slider JS CDN Absolute link >> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Cutom JavaScript Relative Link -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Bootstrap JS CDN Absolute link >> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const users = [
+        {
+          img: "profile3.jpg",
+          post: "bg2.jpg",
+          name: "Admin1",
+          membars: "20",
+          mail: "admin1@topntech.com",
+          id: "@hellouser1",
+        },
+        {
+          img: "profile2.jpg",
+          post: "bg8.jpg",
+          name: "Admin2",
+          membars: "23",
+          mail: "admin2@topntech.com",
+          id: "@hellouser2",
+        },
+        {
+          img: "profile4.jpg",
+          post: "bg7.jpg",
+          name: "Admin3",
+          membars: "21",
+          mail: "admin3@topntech.com",
+          id: "@hellouser3",
+        },
+        {
+          post: "bg5.jpg",
+          img: "profile.jpg",
+          name: "Admin4",
+          membars: "20",
+          mail: "admin4@topntech.com",
+          id: "@hellouser4",
+        },
+      ];
+      const test = users.map(function (user) {
+        return `
+        <div class="col-6">
                 <div class="new_post">
                   <div class="post_header">
                     <div class="post_profile">
-                      <img src="./assets/images/profiles/profile2.jpg" alt="" />
+                      <img src="./assets/images/profiles/${user.img}" alt="" />
                       <div class="text-start">
-                        <h6 class="user_name">Hello User</h6>
-                        <h6 class="user_id">@hellouser</h6>
+                        <h6 class="user_name">${user.name}r</h6>
+                        <h6 class="user_id">${user.id}</h6>
                       </div>
                     </div>
                     <div class="post_menu">
@@ -1247,11 +1312,11 @@
                     </div>
                   </div>
                   <div class="post_media">
-                    <img src="./assets/images/background/bg2.jpg" alt="" />
+                    <img src="./assets/images/background/${user.post}" alt="" />
                   </div>
                   <div class="post_caption">
                     <p class="caption_text">
-                      <span>@hellouser</span>
+                      <span>${user.id}</span>
                       <span>
                         Lorem ipsum dolor sit, amet consectetur adipisicing
                         elit. Aspernatur, accusantium!...
@@ -1266,229 +1331,9 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- New Post end << -->
-          </div>
-        </div>
-        <!-- Main_Content end >> -->
-      </main>
-    </div>
-    <!-- Main body end >> -->
-
-    <!-- Script area -->
-
-    <!-- Swiper Slider JS CDN Absolute link >> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Cutom JavaScript Relative Link -->
-    <script src="./assets/js/script.js"></script>
-
-    <!-- Bootstrap JS CDN Absolute link >> -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      const users = [
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-      ];
-      const test = users.map(function (user) {
-        return `
-                <tr>
-                    <td class="table_pic">
-                      <img
-                        src="./assets/images/profiles/${user.img}"
-                      />
-                      ${user.name}
-                    </td>
-                    <td>${user.id}</td>
-                    <td>${user.membars}</td>
-                    <td> ${user.name}</td>
-                    <td> ${user.mail}</td>
-                    
-                  </tr>
                 `;
       });
-      document.getElementById("table_group").innerHTML = test.join(" ");
+      document.getElementById("posts").innerHTML = test.join(" ");
     </script>
   </body>
 </html>
