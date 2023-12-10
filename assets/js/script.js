@@ -19,6 +19,29 @@ var swiper = new Swiper(".stories_slid", {
     delay: 5000,
     disableOnInteraction: false,
   },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 4,
+      spaceBetweenSlides: 10,
+    },
+    400: {
+      slidesPerView: 5,
+      spaceBetweenSlides: 10,
+    },
+    576: {
+      slidesPerView: 7,
+      spaceBetweenSlides: 10,
+    },
+    768: {
+      slidesPerView:8,
+      spaceBetweenSlides: 10,
+    },
+    1400: {
+      slidesPerView: 8,
+      spaceBetweenSlides: 10,
+    },
+  },
 });
 
 swiper.on("slideChangeTransitionEnd", function (e) {
@@ -53,3 +76,11 @@ var swiper = new Swiper(".update", {
   },
 });
 // Swiper.js Custom Js Code End from }}
+
+// ADD class for sidebar Close Open from {{
+function openclose() {
+  let main = document.getElementById("main");
+
+  main.classList.toggle("open_side_nav");
+}
+// ADD class for sidebar Close Open from }}

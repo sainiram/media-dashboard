@@ -27,48 +27,81 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- Css style sheet Relative link << -->
   </head>
+
   <body>
     <section class="login_page">
-      <div class="row w-100 mx-0 align-items-stretch g-0">
+      <div class="row w-100 mx-0 align-items-stretch gx-0">
         <div class="col-xxl-9 col-lg-8 col-md-6 d-md-block d-none position-relative">
-          <img src="./assets/images/background/login.jpg" class="login_side_img" alt="" />
+          <img
+            src="./assets/images/background/signup.jpg"
+            class="login_side_img"
+            alt=""
+          />
           <div class="overlay_on_img"></div>
         </div>
         <div class="col-xxl-3 col-lg-4 col-md-6">
           <div class="login_card">
             <div class="log_header">
-              <h1>Welcome back</h1>
-              <h2>Login to Your Account</h2>
-              <p>Unlock a world of efficiency with our intuitive dashboard.</p>
+              <h1>Signup</h1>
+              <h2>to start connecting!</h2>
             </div>
             <div class="log_form">
               <form action="./dashboard.html">
                 <div class="form-floating mb-3">
                   <input
-                    type="email"
+                    type="text"
                     class="form-control"
                     id="floatingInput"
+                    value="Administrator"
+                    placeholder="Enter your name"
+                  />
+                  <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
                     value="admin123@gmail.com"
-                    placeholder="name@example.com"
+                    id="floatingInput"
+                    placeholder="Enter your email"
                   />
                   <label for="floatingInput">Email address</label>
                 </div>
-                <div class="form-floating">
+                <div class="form-floating mb-3">
                   <input
                     type="password"
                     class="form-control"
+                    value="********"
                     id="floatingPassword"
                     placeholder="Password"
-                    value="********"
                   />
                   <label for="floatingPassword">Password</label>
                 </div>
-                <div class="text-end">
-                  <a href="" class="forgot_link">Forgot Password?</a>
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    value="********"
+                    id="floatingPassword"
+                    placeholder="Confirm Password"
+                  />
+                  <label for="floatingPassword">Confirm Password</label>
                 </div>
-                <button type="submit" class="submit_btn">Login</button>
-
-                <p>Don’t have an account? <a href="signUp.html">Sign Up</a></p>
+                <button type="submit" class="submit_btn">Sign Up</button>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    checked
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    By creating an account you have to agree with our Terms &
+                    Conditions.
+                  </label>
+                </div>
+                <p>Already have an account? <a href="index.html">Login</a></p>
               </form>
             </div>
           </div>

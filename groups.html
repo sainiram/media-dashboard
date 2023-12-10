@@ -31,9 +31,7 @@
     <!-- Header start << -->
     <header>
       <div class="container-xxl container-fluid">
-        <nav
-          class="navbar navbar-expand-lg bg-white px-3 rounded-bottom-4 shadow"
-        >
+        <nav class="navbar navbar-expand bg-white px-3 rounded-bottom-4 shadow">
           <a class="navbar-brand" href="#">
             <img src="./assets/images/logos/logo.png" alt="" />
           </a>
@@ -112,6 +110,11 @@
       <main id="main">
         <!-- Left Sidenav Start << -->
         <div class="sidebar_l">
+          <div class="opencolse">
+            <button class="open_butn" onclick="openclose()">
+              <i class="fa-solid fa-bars-staggered fs-4"></i>
+            </button>
+          </div>
           <div class="list_cover">
             <!-- -------------------  -->
             <div
@@ -138,7 +141,7 @@
                 class="side_nav_list border-bottom border-1 border-secondary-subtle"
               >
                 <li class="side_list_item">
-                  <a href="./index.html" class="side_nav_link">
+                  <a href="./dashboard.html" class="side_nav_link">
                     <i class="fa-solid fa-tv"></i>
                     <span>Home</span>
                   </a>
@@ -454,16 +457,20 @@
       const test = users.map(function (user) {
         return `
                 <tr>
-                    <td class="table_pic">
-                      <img
-                        src="./assets/images/profiles/${user.img}"
-                      />
-                      ${user.name}
+                    <td class="table_pic_td">
+                      <div class="table_pic">
+                        <img
+                         src="./assets/images/profiles/${user.img}"
+                         />
+                        <span> ${user.name} </span>
+                        </div>
+                    
+                   
                     </td>
-                    <td>${user.id}</td>
-                    <td>${user.membars}</td>
-                    <td> ${user.name}</td>
-                    <td> ${user.mail}</td>
+                    <td data_label="USER_ID">${user.id}</td>
+                    <td data_label="MEMBARS">${user.membars}</td>
+                    <td data_label="GROUP_NAME"> ${user.name}</td>
+                    <td data_label="GROUP_MAIL"> ${user.mail}</td>
                     
                   </tr>
                 `;
