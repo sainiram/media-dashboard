@@ -47,18 +47,60 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <form
-            class="form rounded-3 py-1 px-3 d-flex justify-content-center align-items-center"
-            role="search"
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="border-0 bg-transparent modal_btn"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
           >
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input
-              class="form-control me-2 shadow-none border-0 bg-transparent"
-              type="search"
-              placeholder="News Categories"
-              aria-label="Search"
-            />
-          </form>
+          </button>
+
+          <!-- Search Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content p-0 border-0 bg-transparent">
+               
+                <div class="modal-body p-0 border-0 bg-transparent">
+                  <div class="search_area">
+                    <form class="form" role="search">
+                      <input
+                        class="form_input"
+                        type="search"
+                        placeholder="Search News Categories"
+                        aria-label="Search"
+                      />
+                    </form>
+
+                    <div class="seracj_list">
+                      <ul>
+                        <li><a href="#">Not recent serach</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <!-- <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button> -->
+                  <button type="button" class="butn">Search Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -114,7 +156,8 @@
                           <h6 class="user_name">Hello User</h6>
                           <h6 class="user_id">@hellouser</h6>
                         </div>
-                      </div></a>
+                      </div></a
+                    >
                   </li>
                   <li><a class="dropdown-item" href="#">Settings</a></li>
                   <li>
