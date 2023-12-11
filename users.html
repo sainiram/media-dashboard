@@ -47,12 +47,12 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-             <!-- Button trigger modal -->
+          <!-- Button trigger modal -->
           <button
             type="button"
             class="border-0 bg-transparent modal_btn"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
+            data-bs-target="#searchBar"
           >
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
@@ -60,14 +60,13 @@
           <!-- Search Modal -->
           <div
             class="modal fade"
-            id="exampleModal"
+            id="searchBar"
             tabindex="-1"
-            aria-labelledby="exampleModalLabel"
+            aria-labelledby="searchBarLabel"
             aria-hidden="true"
           >
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content p-0 border-0 bg-transparent">
-               
                 <div class="modal-body p-0 border-0 bg-transparent">
                   <div class="search_area">
                     <form class="form" role="search">
@@ -121,7 +120,7 @@
                   />
                 </a>
               </li>
-          <li class="nav-item dropdown">
+              <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -156,7 +155,8 @@
                           <h6 class="user_name">Hello User</h6>
                           <h6 class="user_id">@hellouser</h6>
                         </div>
-                      </div></a>
+                      </div></a
+                    >
                   </li>
                   <li><a class="dropdown-item" href="#">Settings</a></li>
                   <li>
@@ -213,13 +213,13 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="./peoples.html" class="side_nav_link active">
+                  <a href="./users.html" class="side_nav_link active">
                     <i class="fa-solid fa-users"></i>
-                    <span>People</span>
+                    <span>Users</span>
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="#" class="side_nav_link">
+                  <a href="./event.html" class="side_nav_link">
                     <i class="fa-solid fa-medal"></i>
                     <span>Events</span>
                   </a>
@@ -243,8 +243,8 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="#" class="side_nav_link">
-                    <i class="fa-regular fa-bookmark"></i>
+                  <a href="./saved.html" class="side_nav_link">
+                    <i class="fa-solid fa-bookmark"></i>
                     <span>Saved</span>
                   </a>
                 </li>
@@ -303,6 +303,42 @@
         <!-- Main_Content start << -->
         <div class="main_content">
           <div class="content_cover">
+            <div
+              class="save_Heading new_post d-flex justify-content-between align-items-center p-4 rounded-5 shadow bg-white mb-5"
+            >
+              <h2 style="font-size: 1.8rem; font-weight: bold">Users Info</h2>
+              <div class="dropdown">
+                <button
+                  class=""
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="fa-regular fa-bookmark"></i>
+                      <span>Remove All</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="fa-regular fa-calendar"></i>
+                      <span>Store_By_Date</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="fa-solid fa-arrow-down-a-z"></i>
+                      <span>Store_By_Name</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             <div class="people_contacts">
               <div class="row gy-4" id="people"></div>
             </div>

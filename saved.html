@@ -47,12 +47,12 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-             <!-- Button trigger modal -->
+          <!-- Button trigger modal -->
           <button
             type="button"
             class="border-0 bg-transparent modal_btn"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
+            data-bs-target="#searchBar"
           >
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
@@ -60,14 +60,13 @@
           <!-- Search Modal -->
           <div
             class="modal fade"
-            id="exampleModal"
+            id="searchBar"
             tabindex="-1"
-            aria-labelledby="exampleModalLabel"
+            aria-labelledby="searchBarLabel"
             aria-hidden="true"
           >
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content p-0 border-0 bg-transparent">
-               
                 <div class="modal-body p-0 border-0 bg-transparent">
                   <div class="search_area">
                     <form class="form" role="search">
@@ -121,7 +120,7 @@
                   />
                 </a>
               </li>
-          <li class="nav-item dropdown">
+              <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -156,7 +155,8 @@
                           <h6 class="user_name">Hello User</h6>
                           <h6 class="user_id">@hellouser</h6>
                         </div>
-                      </div></a>
+                      </div></a
+                    >
                   </li>
                   <li><a class="dropdown-item" href="#">Settings</a></li>
                   <li>
@@ -213,13 +213,13 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="./peoples.html" class="side_nav_link">
+                  <a href="./users.html" class="side_nav_link">
                     <i class="fa-solid fa-users"></i>
-                    <span>People</span>
+                    <span>Users</span>
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="#" class="side_nav_link">
+                  <a href="./event.html" class="side_nav_link">
                     <i class="fa-solid fa-medal"></i>
                     <span>Events</span>
                   </a>
@@ -231,7 +231,7 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="./groups.html" class="side_nav_link active">
+                  <a href="./groups.html" class="side_nav_link">
                     <i class="fa-solid fa-braille"></i>
                     <span>Groups</span>
                   </a>
@@ -243,8 +243,8 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="#" class="side_nav_link">
-                    <i class="fa-regular fa-bookmark"></i>
+                  <a href="./saved.html" class="side_nav_link active">
+                    <i class="fa-solid fa-bookmark"></i>
                     <span>Saved</span>
                   </a>
                 </li>
@@ -303,20 +303,44 @@
         <!-- Main_Content start << -->
         <div class="main_content">
           <div class="content_cover">
-            <div class="group_table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>GROUP_NAME</th>
-                    <th>GROUP_ID</th>
-                    <th>MEMBARS</th>
-                    <th>ADMIN_NAME</th>
-                    <th>ADMIN_MAIL</th>
-                  </tr>
-                </thead>
-                <tbody id="table_group"></tbody>
-              </table>
+            <div
+              class="save_Heading new_post d-flex justify-content-between align-items-center p-4 rounded-5 shadow  bg-white mb-2"
+            >
+              <h2 style="font-size: 1.8rem; font-weight: bold">Saved Post</h2>
+              <div class="dropdown">
+                <button
+                  class=""
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="fa-regular fa-bookmark"></i>
+                      <span>Remove All</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="fa-regular fa-calendar"></i>
+                      <span>Store_By_Date</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <i class="fa-solid fa-arrow-down-a-z"></i>
+                      <span>Store_By_Name</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <!-- New Post start >> -->
+            <div class="row" id="posts"></div>
+            <!-- New Post end << -->
           </div>
         </div>
         <!-- Main_Content end >> -->
@@ -343,201 +367,156 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-
     <script>
       const users = [
         {
           img: "profile3.jpg",
+          post: "bg2.jpg",
           name: "Admin1",
           membars: "20",
           mail: "admin1@topntech.com",
-          id: "0987654321",
+          id: "@hellouser1",
         },
         {
           img: "profile2.jpg",
+          post: "bg8.jpg",
           name: "Admin2",
           membars: "23",
           mail: "admin2@topntech.com",
-          id: "9827493792",
+          id: "@hellouser2",
         },
         {
           img: "profile4.jpg",
+          post: "bg7.jpg",
           name: "Admin3",
           membars: "21",
           mail: "admin3@topntech.com",
-          id: "7837384726",
+          id: "@hellouser3",
         },
         {
+          post: "bg5.jpg",
           img: "profile.jpg",
           name: "Admin4",
           membars: "20",
           mail: "admin4@topntech.com",
-          id: "6237495026",
+          id: "@hellouser4",
+        },
+        {
+          img: "profile3.jpg",
+          post: "bg2.jpg",
+          name: "Admin1",
+          membars: "20",
+          mail: "admin1@topntech.com",
+          id: "@hellouser1",
+        },
+        {
+          img: "profile2.jpg",
+          post: "bg8.jpg",
+          name: "Admin2",
+          membars: "23",
+          mail: "admin2@topntech.com",
+          id: "@hellouser2",
+        },
+        {
+          img: "profile4.jpg",
+          post: "bg7.jpg",
+          name: "Admin3",
+          membars: "21",
+          mail: "admin3@topntech.com",
+          id: "@hellouser3",
+        },
+        {
+          post: "bg5.jpg",
+          img: "profile.jpg",
+          name: "Admin4",
+          membars: "20",
+          mail: "admin4@topntech.com",
+          id: "@hellouser4",
         },
 
         {
           img: "profile3.jpg",
+          post: "bg2.jpg",
           name: "Admin1",
           membars: "20",
           mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
+          id: "@hellouser1",
         },
       ];
       const test = users.map(function (user) {
         return `
-                <tr>
-                    <td class="table_pic">
-                      <img
-                        src="./assets/images/profiles/${user.img}"
-                      />
-                      ${user.name}
-                    </td>
-                    <td>${user.id}</td>
-                    <td>${user.membars}</td>
-                    <td> ${user.name}</td>
-                    <td> ${user.mail}</td>
-                    
-                  </tr>
+        <div class="col-xl-4 col-md-6 col-sm-12 col-12 ">
+                <div class="new_post">
+                  <div class="post_header">
+                    <div class="post_profile">
+                      <img src="./assets/images/profiles/${user.img}" alt="" />
+                      <div class="text-start">
+                        <h6 class="user_name">${user.name}r</h6>
+                        <h6 class="user_id">${user.id}</h6>
+                      </div>
+                    </div>
+                    <div class="post_menu">
+                      <div class="dropdown">
+                        <button
+                          class=""
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i class="fa-regular fa-bookmark"></i>
+                              <span>Past UnSave</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i class="fa-solid fa-user-xmark"></i>
+                              <span>UnFollow</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i class="fa-regular fa-hand"></i>
+                              <span>Block</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i class="fa-solid fa-shield-halved"></i>
+                              <span>Report Post</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="post_media">
+                    <img src="./assets/images/background/${user.post}" alt="" />
+                  </div>
+                  <div class="post_caption">
+                    <p class="caption_text">
+                      <span>${user.id}</span>
+                      <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Aspernatur, accusantium!...
+                      </span>
+                    </p>
+
+                    <div class="like_icon">
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-regular fa-comment-dots"></i>
+                      <i class="fa-regular fa-share-from-square"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
                 `;
       });
-      document.getElementById("table_group").innerHTML = test.join(" ");
+      document.getElementById("posts").innerHTML = test.join(" ");
     </script>
   </body>
 </html>

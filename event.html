@@ -219,7 +219,7 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="./event.html" class="side_nav_link">
+                  <a href="./event.html" class="side_nav_link active">
                     <i class="fa-solid fa-medal"></i>
                     <span>Events</span>
                   </a>
@@ -231,7 +231,7 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="./groups.html" class="side_nav_link active">
+                  <a href="./groups.html" class="side_nav_link">
                     <i class="fa-solid fa-braille"></i>
                     <span>Groups</span>
                   </a>
@@ -306,7 +306,7 @@
             <div
               class="save_Heading new_post d-flex justify-content-between align-items-center p-4 rounded-5 shadow bg-white mb-5"
             >
-              <h2 style="font-size: 1.8rem; font-weight: bold">Groups Info</h2>
+              <h2 style="font-size: 1.8rem; font-weight: bold">All Events</h2>
               <div class="dropdown">
                 <button
                   class=""
@@ -317,12 +317,6 @@
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
                 <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa-regular fa-bookmark"></i>
-                      <span>Remove All</span>
-                    </a>
-                  </li>
                   <li>
                     <a class="dropdown-item" href="#">
                       <i class="fa-regular fa-calendar"></i>
@@ -338,21 +332,9 @@
                 </ul>
               </div>
             </div>
-
-            <div class="group_table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>GROUP_NAME</th>
-                    <th>GROUP_ID</th>
-                    <th>MEMBARS</th>
-                    <th>ADMIN_NAME</th>
-                    <th>ADMIN_MAIL</th>
-                  </tr>
-                </thead>
-                <tbody id="table_group"></tbody>
-              </table>
-            </div>
+            <!-- New Post start >> -->
+            <div class="event_post" id="eventPost"></div>
+            <!-- New Post end << -->
           </div>
         </div>
         <!-- Main_Content end >> -->
@@ -379,205 +361,101 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-
     <script>
-      const users = [
+      const events = [
         {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
+          img: "bg5.jpg",
+          title: "Event Title",
+          description:
+            " Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.",
+          moreDescription:
+            " Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.  Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam. Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.",
         },
         {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
+          img: "bg7.jpg",
+          title: "Event Title",
+          description:
+            " Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.",
+          moreDescription:
+            " Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.  Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam. Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.",
         },
         {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
+          img: "bg8.jpg",
+          title: "Event Title",
+          description:
+            " Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.",
+          moreDescription:
+            " Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.  Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam. Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.",
         },
         {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          membars: "20",
-          mail: "admin1@topntech.com",
-          id: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          membars: "23",
-          mail: "admin2@topntech.com",
-          id: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          membars: "21",
-          mail: "admin3@topntech.com",
-          id: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          membars: "20",
-          mail: "admin4@topntech.com",
-          id: "6237495026",
+          img: "bg2.jpg",
+          title: "Event Title",
+          description:
+            " Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.",
+          moreDescription:
+            " Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.  Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam. Lorem, ipsum dolor sit amet consectetur adipisicing elit Reiciendis suscipit ducimus atque voluptatem qui quis quae explicabo dicta rem exercitationem sapiente iure ratione quidem possimus accusamus est repellendus sit ipsa nobis, ipsum eligendi vel in.Vero consequatur aperiam neque quibusdam facilis adipisci quaerat nesciunt molestiae architecto quidem maiores.] Rem laboriosam.",
         },
       ];
-      const test = users.map(function (user) {
+      const test = events.map(function (epost) {
         return `
-                <tr>
-                    <td class="table_pic_td">
-                      <div class="table_pic">
-                        <img
-                         src="./assets/images/profiles/${user.img}"
-                         />
-                        <span> ${user.name} </span>
+        <div class="row mb-4 gy-4 justify-content-center align-items-center">
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                  <img src="./assets/images/background/${epost.img}" alt="" />
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-8 col-12">
+                  <div class="event_text_body">
+                    <h2>${epost.title}</h2>
+                    <p class="event_content_area">
+                    ${epost.description}
+                    </p>
+
+                    <!-- Button trigger modal -->
+                    <button
+                      type="button"
+                      class="butn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#event_content"
+                    >
+                      View Moer
+                    </button>
+
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="event_content"
+                      tabindex="-1"
+                      aria-labelledby="event_contentLabel"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+                      >
+                        <div class="modal-content p-0 border-0 bg-transparent">
+                          <div class="modal-body rounded-4 bg-white">
+                            <p class="event_content_area text-center">
+                             ${epost.moreDescription}
+                            </p>
+                          </div>
+                          <div
+                            class="modal-footer border-0 bg-white mt-3 rounded-4 justify-content-center"
+                          >
+                            <button
+                              type="button"
+                              class="butn"
+                              data-bs-dismiss="modal"
+                            >
+                              View Less
+                            </button>
+                          </div>
                         </div>
-                    
-                   
-                    </td>
-                    <td data_label="USER_ID">${user.id}</td>
-                    <td data_label="MEMBARS">${user.membars}</td>
-                    <td data_label="GROUP_NAME"> ${user.name}</td>
-                    <td data_label="GROUP_MAIL"> ${user.mail}</td>
-                    
-                  </tr>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
                 `;
       });
-      document.getElementById("table_group").innerHTML = test.join(" ");
+      document.getElementById("eventPost").innerHTML = test.join(" ");
     </script>
   </body>
 </html>
