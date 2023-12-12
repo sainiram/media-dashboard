@@ -20,6 +20,12 @@ body {
   overflow-y: auto;
   font-family: "Urbanist", sans-serif;
 }
+@media (min-width: 1400px) {
+  .container-xxl {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+}
 @media (min-width: 1500px) {
   .container-xxl {
     max-width: 100% !important;
