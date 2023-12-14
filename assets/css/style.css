@@ -309,12 +309,17 @@ body {
   text-transform: capitalize;
   align-items: center;
   color: var(--text_teme);
-  padding: 10px 15px;
+  padding: 8px 10px;
   border-radius: 15px;
   border-bottom: 1px solid rgb(240, 240, 240);
   box-shadow: 0px 0px 5px rgba(106, 105, 105, 0);
   margin-bottom: 6px;
   transition: all 0.5s;
+}
+
+.navbar .dropdown .dropdown-item div h6 {
+  font-size: 0.8rem;
+  margin-bottom: 0;
 }
 
 .navbar-nav .dropdown .dropdown-item:hover {
@@ -389,6 +394,7 @@ body {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0;
+  color: var(--text_teme);
 }
 
 .sidebar_l .side_nav .side_nav_list {
@@ -911,8 +917,44 @@ thead {
   border-bottom: 1px solid #ea399e;
   box-shadow: inset -1800px 0px 0px #ea399d2a;
 }
-
 /* ==================GROUPS PAGE CLOSED }}================== */
+/* ==================TABLES PAGE CLOSED }}================== */
+.users_work_table tbody {
+  display: block;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.users_work_table table tbody tr:hover {
+  background-color: rgb(247, 245, 245);
+}
+.users_work_table:nth-child(3) table tbody tr:hover {
+  background-color: #fd760f0f;
+}
+.users_work_table tbody tr:nth-child(odd) td:nth-child(5) {
+  transition: all 0.3s;
+  box-shadow: none;
+}
+
+.users_work_table tbody tr:nth-child(odd):hover td:nth-child(5) {
+  border-bottom: 1px solid #000000;
+  box-shadow: none;
+}
+
+.users_work_table tbody tr:nth-child(even) td:nth-child(5) {
+  transition: all 0.3s;
+  box-shadow: none;
+}
+
+.users_work_table tbody tr:nth-child(even):hover td:nth-child(5) {
+  border-bottom: 1px solid #000000;
+  box-shadow: none;
+}
+
+.users_work_table:nth-child(3) thead {
+  background-color: #fd760f2a;
+}
+/* ==================TABLES PAGE CLOSED }}================== */
 /* ==================EVENTS PAGE START {{================== */
 .event_post img {
   border-radius: 20px;
@@ -956,6 +998,118 @@ thead {
   text-align-last: center;
 }
 /* ==================EVENTS PAGE CLOSED }}================== */
+
+/* ==================PROFILE PAGE START {{================== */
+.your_profile_page {
+  padding: 0px 10px;
+}
+.your_profile_page .profile_card {
+  background: url(../images/background/bg9.jpg) no-repeat bottom center/cover;
+  border-radius: 20px;
+  box-shadow: var(--shadow20);
+  padding: 20px;
+  height: 100%;
+  max-height: 400px;
+  min-height: 300px;
+}
+
+.your_profile_page .profile_card .profile_info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.your_profile_page .profile_card .profile_info .profile_pic {
+  padding: 10px;
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: var(--shadow20);
+  width: 300px;
+  aspect-ratio: 1/1;
+}
+.your_profile_page .profile_card .profile_info .profile_pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.your_profile_page .profile_card .profile_info .profile_info_body {
+  padding: 20px 0px 20px 10px;
+  color: var(--white);
+}
+
+.your_profile_page .profile_card .profile_info .profile_info_body h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.your_profile_page .profile_card .profile_info .profile_info_body h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.your_profile_page .profile_card .profile_info .profile_info_body a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.profile_card .nav-link {
+  color: var(--text_teme);
+  background-color: #ffffff;
+  box-shadow: var(--shadow20);
+  margin-right: 10px;
+}
+.profile_card .nav-link.active {
+  background: linear-gradient(
+    to right,
+    rgb(255, 128, 0),
+    rgb(233, 50, 172)
+  ) !important;
+}
+
+.profile_edit_info .about_user, .profile_edit_info .contact_area_info {
+  padding: 20px;
+  background-color: var(--white);
+  box-shadow: var(--shadow20);
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+.profile_edit_info .about_user h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(255, 128, 0), rgb(233, 50, 172)) ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.profile_edit_info .about_user h4 p{
+  font-weight: 500;
+  font-size: 1.2;
+}
+
+.profile_edit_info .contact_area_info {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile_edit_info .contact_area_info a{
+  text-decoration: none;
+  color: var(--text_teme);
+  font-size: 1.2rem;
+  font-weight: bold;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile_edit_info .contact_area_info a i{
+  background: linear-gradient(to right, rgb(255, 128, 0), rgb(233, 50, 172)) ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+}
+
+/* ==================PROFILE PAGE CLOSED }}================== */
+
 /* ==================LOGIN &  SIGNIN PAGES START {{================== */
 
 .login_page {
@@ -1084,6 +1238,15 @@ thead {
 
 /* Media query start from {{ */
 
+@media (min-width: 1200px) {
+  .your_profile_page .profile_card {
+    margin-bottom: 120px;
+  }
+  .your_profile_page .profile_card .profile_info .profile_pic {
+    transform: translateY(120px);
+  }
+}
+
 @media (max-width: 1199.98px) {
   /* Main start from {{ */
   #main {
@@ -1103,10 +1266,21 @@ thead {
     left: -300px;
     transition: all 0.5s;
     z-index: 999;
+
+    animation: out 0.8s 1 backwards;
   }
 
   #main.open_side_nav .sidebar_l {
     left: 0px;
+  }
+  @keyframes out {
+    0%,
+    100% {
+      left: -300px;
+    }
+    50% {
+      left: -280px;
+    }
   }
 
   .opencolse {
@@ -1119,7 +1293,7 @@ thead {
     justify-content: center;
     align-items: center;
     padding: 3px 8px !important;
-    top: -14px;
+    top: -20px;
     right: -29px;
     position: absolute;
     border: none;
@@ -1127,11 +1301,12 @@ thead {
     border-radius: 10px;
     box-shadow: 0px 0px 10px lightgray;
     transform: rotateY(0deg);
-    transition: all 0.5s;
+    transition: all 0.6s;
   }
 
   .open_side_nav .opencolse .open_butn {
     transform: rotateY(180deg);
+    right: 10px;
   }
 
   /* Side nav left end from }} */

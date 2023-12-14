@@ -186,7 +186,8 @@
             <div
               class="side_profie border-bottom border-1 border-secondary-subtle pb-3"
             >
-               <a href="./profile.html"
+              <a
+                href="./profile.html"
                 class="d-flex gap-3 justify-content-start align-items-center text-decoration-none"
               >
                 <img
@@ -213,7 +214,7 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="./users.html" class="side_nav_link active">
+                  <a href="./users.html" class="side_nav_link">
                     <i class="fa-solid fa-users"></i>
                     <span>Users</span>
                   </a>
@@ -225,7 +226,7 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="./tables.html" class="side_nav_link">
+                  <a href="./tables.html" class="side_nav_link active">
                     <i class="fa-regular fa-images"></i>
                     <span>Tables</span>
                   </a>
@@ -303,44 +304,112 @@
         <!-- Main_Content start << -->
         <div class="main_content">
           <div class="content_cover">
-            <div
-              class="save_Heading new_post d-flex justify-content-between align-items-center p-4 rounded-5 shadow bg-white mb-5"
-            >
-              <h2 style="font-size: 1.8rem; font-weight: bold">Users Info</h2>
-              <div class="dropdown">
-                <button
-                  class=""
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="fa-solid fa-ellipsis-vertical"></i>
-                </button>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa-regular fa-bookmark"></i>
-                      <span>Remove All</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa-regular fa-calendar"></i>
-                      <span>Store_By_Date</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <i class="fa-solid fa-arrow-down-a-z"></i>
-                      <span>Store_By_Name</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <div class="your_profile_page">
+              <div
+                class="profile_card row justify-content-between align-items-end"
+              >
+                <div class="col-5">
+                  <div class="profile_info">
+                    <div class="profile_pic">
+                      <img src="./assets/images/profiles/profile.jpg" alt="" />
+                    </div>
 
-            <div class="people_contacts">
-              <div class="row gy-4" id="people"></div>
+                    <div class="profile_info_body">
+                      <h3>@Administrator</h3>
+                      <h4>admin@topntech.com</h4>
+                      <a href="https://www.topntech.com" target="_blank">
+                        TopNTech.COM
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-7">
+                  <ul
+                    class="nav nav-pills justify-content-end mb-3"
+                    id="pills-tab"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="pills-home-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-home"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-home"
+                        aria-selected="true"
+                      >
+                        About
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-profile-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-profile"
+                        aria-selected="false"
+                      >
+                        Update_Profile
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="profile_edit_info">
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-home"
+                    role="tabpanel"
+                    aria-labelledby="pills-home-tab"
+                    tabindex="0"
+                  >
+                    <div class="row">
+                      <div class="col-8">
+                        <div class="about_user">
+                          <h4>About Me</h4>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Incidunt magnam cum nisi, recusandae labore
+                            esse rerum sapiente! Deleniti dicta cumque
+                            temporibus earum repellendus, exercitationem, quos
+                            esse laudantium officiis quae ut labore possimus
+                            veritatis maxime similique mollitia odio ipsa.
+                            Perspiciatis neque provident dolor explicabo nobis
+                            ullam veniam omnis voluptatem esse voluptas.
+                          </p>
+                        </div>
+
+                        <div class="contact_area_info">
+                          <a href="#">
+                            <i class="fa-brands fa-whatsapp fa-shake"></i>
+                            <span>+91 7846374828</span>
+                          </a>
+                          <a href="#">
+                            <i class="fa-solid fa-phone-volume fa-shake"></i>
+                            <span>+91 7846374828</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="pills-profile"
+                    role="tabpanel"
+                    aria-labelledby="pills-profile-tab"
+                    tabindex="0"
+                  >
+                    Edit
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -368,203 +437,5 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      const users = [
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-      ];
-      const test = users.map(function (user) {
-        return `
-        <div class="col-xxl-3 col-lg-4 col-md-6 col-12">
-                  <div class="contact_card">
-                    <img
-                      src="./assets/images/profiles/${user.img}"
-                      alt="user"
-                    />
-                    <div class="contact_card_body">
-                      <h3 class="contact_user_name">Name : ${user.name}</h3>
-                      <ul class="user_data_list">
-                        <li class="user_data"><span>Mail :</span> ${user.mail}</li>
-                        <li class="user_data"><span>Age :</span> ${user.age}</li>
-                        <li class="user_data"><span>Contact :</span> +91 ${user.contact}</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>`;
-      });
-      document.getElementById("people").innerHTML = test.join(" ");
-    </script>
   </body>
 </html>

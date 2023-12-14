@@ -213,7 +213,7 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="./users.html" class="side_nav_link active">
+                  <a href="./users.html" class="side_nav_link">
                     <i class="fa-solid fa-users"></i>
                     <span>Users</span>
                   </a>
@@ -225,7 +225,7 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="./tables.html" class="side_nav_link">
+                  <a href="./tables.html" class="side_nav_link active">
                     <i class="fa-regular fa-images"></i>
                     <span>Tables</span>
                   </a>
@@ -306,7 +306,7 @@
             <div
               class="save_Heading new_post d-flex justify-content-between align-items-center p-4 rounded-5 shadow bg-white mb-5"
             >
-              <h2 style="font-size: 1.8rem; font-weight: bold">Users Info</h2>
+              <h2 style="font-size: 1.8rem; font-weight: bold">Tables</h2>
               <div class="dropdown">
                 <button
                   class=""
@@ -339,8 +339,35 @@
               </div>
             </div>
 
-            <div class="people_contacts">
-              <div class="row gy-4" id="people"></div>
+            <div class="group_table users_work_table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Time In</th>
+                    <th>Time Out</th>
+                    <th>Projects_Count</th>
+                  </tr>
+                </thead>
+                <tbody id="table_group"></tbody>
+              </table>
+            </div>
+
+            <div class="group_table users_work_table mt-5">
+              <table>
+                <thead>
+                  <tr>
+                    <th>SNo.</th>
+                    <th>Name</th>
+                    <th>Card_No.</th>
+                    <th>Card id</th>
+                    <th>Attendance</th>
+                    <th>Totle Salary</th>
+                  </tr>
+                </thead>
+                <tbody id="employ"></tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -369,202 +396,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      const users = [
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-
-        {
-          img: "profile3.jpg",
-          name: "Admin1",
-          age: "20",
-          mail: "admin1@topntech.com",
-          contact: "0987654321",
-        },
-        {
-          img: "profile2.jpg",
-          name: "Admin2",
-          age: "23",
-          mail: "admin2@topntech.com",
-          contact: "9827493792",
-        },
-        {
-          img: "profile4.jpg",
-          name: "Admin3",
-          age: "21",
-          mail: "admin3@topntech.com",
-          contact: "7837384726",
-        },
-        {
-          img: "profile.jpg",
-          name: "Admin4",
-          age: "20",
-          mail: "admin4@topntech.com",
-          contact: "6237495026",
-        },
-      ];
-      const test = users.map(function (user) {
-        return `
-        <div class="col-xxl-3 col-lg-4 col-md-6 col-12">
-                  <div class="contact_card">
-                    <img
-                      src="./assets/images/profiles/${user.img}"
-                      alt="user"
-                    />
-                    <div class="contact_card_body">
-                      <h3 class="contact_user_name">Name : ${user.name}</h3>
-                      <ul class="user_data_list">
-                        <li class="user_data"><span>Mail :</span> ${user.mail}</li>
-                        <li class="user_data"><span>Age :</span> ${user.age}</li>
-                        <li class="user_data"><span>Contact :</span> +91 ${user.contact}</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>`;
-      });
-      document.getElementById("people").innerHTML = test.join(" ");
-    </script>
+    <script src="./assets/js/tables.js"></script>
   </body>
 </html>
