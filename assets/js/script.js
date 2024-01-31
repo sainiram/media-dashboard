@@ -34,7 +34,7 @@ var swiper = new Swiper(".stories_slid", {
       spaceBetweenSlides: 10,
     },
     768: {
-      slidesPerView:8,
+      slidesPerView: 8,
       spaceBetweenSlides: 10,
     },
     1400: {
@@ -84,3 +84,25 @@ function openclose() {
   main.classList.toggle("open_side_nav");
 }
 // ADD class for sidebar Close Open from }}
+
+// images Upload Start {{{{{{{{{{{{{{{{{{{{{{{
+
+let upload_profile = function (event) {
+  let image = document.querySelector("#upload_img1");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+let upload_profile1 = function (event) {
+  let image = document.querySelector("#upload_img2");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+let upload_cover = function (event) {
+  let image = document.querySelector("#uploadCover1");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+let upload_cover1 = function (event) {
+  let image = document.querySelector("#uploadCover2");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+// image Upload End }}}}}}}}}}}}}}}}}}}}}}}

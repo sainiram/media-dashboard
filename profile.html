@@ -306,12 +306,17 @@
           <div class="content_cover">
             <div class="your_profile_page">
               <div
+              id="uploadCover2"
                 class="profile_card row justify-content-between align-items-end"
               >
                 <div class="col-5">
                   <div class="profile_info">
                     <div class="profile_pic">
-                      <img src="./assets/images/profiles/profile.jpg" alt="" />
+                      <img
+                        src="./assets/images/profiles/profile.jpg"
+                        id="upload_img2"
+                        alt=""
+                      />
                     </div>
 
                     <div class="profile_info_body">
@@ -370,7 +375,9 @@
                     aria-labelledby="pills-home-tab"
                     tabindex="0"
                   >
-                    <div class="row">
+                    <div
+                      class="row gy-4 align-self-stretch justify-content-center"
+                    >
                       <div class="col-8">
                         <div class="about_user">
                           <h4>About Me</h4>
@@ -397,6 +404,28 @@
                           </a>
                         </div>
                       </div>
+                      <div class="col-4">
+                        <div class="social_link">
+                          <ul>
+                            <li>
+                              <i class="fa-brands fa-facebook-f"></i>
+                              <span>Facebook@user_id</span>
+                            </li>
+                            <li>
+                              <i class="fa-brands fa-instagram"></i>
+                              <span>Instagram@user_id</span>
+                            </li>
+                            <li>
+                              <i class="fa-brands fa-x-twitter"></i>
+                              <span>Twitter@user_id</span>
+                            </li>
+                            <li>
+                              <i class="fa-brands fa-whatsapp"></i>
+                              <span>Whatsapp@user_id</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -406,7 +435,163 @@
                     aria-labelledby="pills-profile-tab"
                     tabindex="0"
                   >
-                    Edit
+                    <form action="" class="w-100">
+                      <div class="row align-items-stretch">
+                        <div class="col-lg-6">
+                          <div class="user_info_edit h-100">
+                            <div class="edit_info_card h-100">
+                              <div class="row gy-3">
+                                <div class="col-12">
+                                  <input
+                                    type="file"
+                                    onchange="upload_profile(event);upload_profile1(event)  "
+                                    id="upload_img"
+                                    hidden
+                                  />
+                                  <label class="w-100" for="upload_img">
+                                    <div class="circle_img">
+                                      <img
+                                        src="./assets/images/profiles/profile.jpg"
+                                        alt=""
+                                        id="upload_img1"
+                                      />
+
+                                      <div class="cam_icon">
+                                        <i class="fa-solid fa-camera"></i>
+                                      </div>
+                                    </div>
+                                  </label>
+                                </div>
+
+                                <div class="col-12">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control shadow-none"
+                                      id="firstName"
+                                      placeholder="First Name"
+                                    />
+                                    <label for="firstName">First Name</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control shadow-none"
+                                      id="lastName"
+                                      placeholder="Last Name"
+                                    />
+                                    <label for="lastName">Last Name</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-floating">
+                                    <textarea
+                                      id="Address"
+                                      style="height: 200px"
+                                      class="form-control shadow-none"
+                                      placeholder="Address"
+                                      height="200"
+                                    ></textarea>
+                                    <label for="Address">Address</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="profile_edit h-100">
+                            <div class="edit_info_card h-100">
+                              <div class="row gy-3">
+                                <div class="col-12">
+                                  <input
+                                    type="file"
+                                    onchange="upload_cover(event);upload_cover1(event)  "
+                                    id="upload_cover_img"
+                                    hidden
+                                  />
+                                  <label class="w-100" for="upload_cover_img">
+                                    <div class="cover_img">
+                                      <img
+                                        src="./assets/images/background/bg7.jpg"
+                                        id="uploadCover1"
+                                        alt=""
+                                      />
+
+                                      <div class="cam_icon">
+                                        <i class="fa-solid fa-camera"></i>
+                                      </div>
+                                    </div>
+                                  </label>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-floating">
+                                    <input
+                                      type="tel"
+                                      class="form-control shadow-none"
+                                      id="phone"
+                                      placeholder="Phone Number"
+                                    />
+                                    <label for="phone">Phone Number</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-floating">
+                                    <input
+                                      type="email"
+                                      class="form-control shadow-none"
+                                      id="email"
+                                      placeholder="Email Address"
+                                    />
+                                    <label for="email">Email Address</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-floating">
+                                    <input
+                                      type="password"
+                                      class="form-control shadow-none"
+                                      id="password"
+                                      placeholder="Password"
+                                    />
+                                    <label for="password">Password</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-floating">
+                                    <input
+                                      type="password"
+                                      class="form-control shadow-none"
+                                      id="passwordConfirm"
+                                      placeholder="Password Confirm"
+                                    />
+                                    <label for="passwordConfirm"
+                                      >Password Confirm</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form_butn text-end">
+                                    <input
+                                      type="submit"
+                                      value="Save"
+                                      class="butn"
+                                    />
+                                    <input
+                                      type="reset"
+                                      value="Cancel"
+                                      class="butn"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
